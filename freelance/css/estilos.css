@@ -1,0 +1,290 @@
+:root{/*este es un pseudoselector, no existe en html almacena cualquier valor en el pseudoselector*/
+
+    --primario: #20a6d8;
+    --secundario: #2980B9;
+    --blanco: #ffffff;
+    --obscuro:#2C3E50;
+    --tercero:#143f87;
+    
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;/* esto es para automatizar lo del tamaño de imagenes sin necesidad de 
+                            hacer calculos para el padding y el margin*/
+    scroll-snap-type: y mandatory;
+}
+
+/*Scroll snap*/
+.servicios
+.navegacion-pr
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }/*esta es la función de lo del padding y el margin automatico*/
+
+body{
+    font-size: 16px;
+    font-family:'Krub', sans-serif;
+    font-weight: 400;
+    background-image: linear-gradient(to top, #b0c0bc 0%, var(--blanco) 100%);
+}
+
+h1{
+    font-size: 3.8rem;
+   text-align: center;
+}
+
+h2{
+    font-size: 2.8rem;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.titulo { 
+    text-align: center;
+    color: var(--secundario);
+}
+.titulo span{
+   font-size: 1.5rem ;
+   color: var(--secundario);
+}
+
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.shadow{
+    -webkit-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.37);
+    -moz-box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.37);
+    box-shadow: -5px 5px 5px 0px rgba(0,0,0,0.37);
+    background-color: var(--blanco);
+    padding: 2rem;
+   /* border-radius: 5rem;*/
+}
+.nav-bg{
+    background-color: var(--primario);
+}
+
+.navegacion-pr{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px) {
+     .navegacion-pr{
+         flex-direction: row;
+         justify-content: space-between;/*aqui estamos definiendo el espacio que debe haber entre cada boton de la navegación*/
+     }
+}
+
+/*Utilerias*/
+.w-100{
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .w-100{
+        width: auto;
+    }    
+}
+
+.flex{
+    display: flex;
+}
+
+.alinear-der{
+    justify-content: flex-end;
+}
+
+/** navgación principal*/
+.navegacion-pr a{
+    /*background-color: var(--tercero);*/
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+.navegacion-pr a:hover{
+    background-color: var(--tercero);
+    color: var(--blanco);   
+}
+
+
+
+.navegacion-pr a:visited{
+    background-color: var(--tercero);
+    color: var(--blanco);   
+}
+
+.hero{
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    /*padding:2rem;*/
+    /*border: 2rem solid black;*/
+    position:relative;
+    margin-bottom: 2rem;
+}
+/*contenido*/
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--obscuro);
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+
+.icono h3{
+    font-size: 2rem;
+    color: var(--primario);
+}
+
+.contenido-hero{
+    position:absolute;
+    /*background-color: rgba(0, 0, 0, .5);*/
+    background-color: rgb(0 0 0/ 50%);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
+}
+/*boton*/
+.boton{
+    background-color: var(--primario);
+    color: var(--blanco);
+    text-decoration: none;
+    padding:  1.5rem 2rem;
+    margin-top: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 1rem;
+    text-align: center;
+    width: 90%;
+    border: none;
+}
+
+.boton:hover{
+
+    cursor: pointer;
+    /*.boton a:hover{*/
+        background-color: var(--tercero);
+        color: var(--blanco);   
+    /*}*/
+}
+
+@media(min-width: 768px) {
+    .boton{
+        width:50%;
+    }
+}
+
+@media(min-width: 1100px) {
+     .boton{
+         width: auto;
+     }
+}
+
+/*servicios*/
+
+@media(min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 1rem;
+    }    
+}
+
+.formulario{
+ background-color: var(--primario);
+ border-radius: 1rem;
+ width: min(60rem, 100%);
+ margin: 0 auto;
+ padding: 2rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+@media(min-width:768px ) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+
+        grid-column: 1 / 3;
+
+    }
+}
+
+.campo{
+    margin-bottom: 1rem;
+
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    display: block;
+
+}
+
+.campo textarea{
+    height: 20rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.footer{
+    text-align: center;
+}
