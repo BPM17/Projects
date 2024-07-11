@@ -6,107 +6,125 @@
     --quinto: #fffaf2;
     --blanco: #fff;
     --negro: #000;
-    --primosc:#e4c200;
-    --lila:#b5179e;
-    --pur:#8338ec;
-    --puc:#a26af1;
-
+    --primosc: #e4c200;
+    --lila: #b5179e;
+    --pur: #8338ec;
+    --puc: #a26af1;
     --fuentepr: 'Ubuntu', sans-serif;
 }
 
+
 /* apply a natural box layout model to all elements, but allowing components to change */
-html{
+
+html {
     font-size: 62.5%;
-    box-sizing: border-box;/* esto es para automatizar lo del tamaño de imagenes sin necesidad de 
+    box-sizing: border-box;
+    /* esto es para automatizar lo del tamaño de imagenes sin necesidad de 
                             hacer calculos para el padding y el margin*/
     scroll-snap-type: y mandatory;
 }
 
-  *, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
-
-  /* Globales*/
-  body{
-      background-color: var(--primario);
-      font-size: 16px;
-      line-height: 1.5;
-      /*interlineado entre parrafos, el tamaño del interlineado es de 1.5 veces mas grande que el tamaño de la fuente*/
-  }
-  p{
-      font-size: 1rem;
-      font-family: var(--fuentepr);
-      color: var(--tercero);
-    }
-
-    a{
-        text-decoration: none;
-    }
-
-    img{
-       width: 100%;
-    }
-
-    .contenedor{
-        max-width: 120rem;
-        margin: 0 auto;
-    }
-
-    h1,h2,h3{
-        font-family: var(--fuentepr);
-        text-align: center;
-        color: var(--tercero);
-    }
+}
 
 
-    h1{
-        font-size: 3rem;
-        font-family: var(--fuentepr);
-    }
+/* Globales*/
 
-    h2{
-        font-size: 2rem;
-    }
+body {
+    background-color: var(--primario);
+    font-size: 16px;
+    line-height: 1.5;
+    /*interlineado entre parrafos, el tamaño del interlineado es de 1.5 veces mas grande que el tamaño de la fuente*/
+}
 
-    h3{
-        font-size: 1.8rem;
-    }
+p {
+    font-size: 1rem;
+    font-family: var(--fuentepr);
+    color: var(--tercero);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuentepr);
+    text-align: center;
+    color: var(--tercero);
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--fuentepr);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
 
 /*header*/
 
-.header{
-    display: flex;
-    justify-content: center;
+.header {
+    /* display: flex;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .header__logo {
-    margin: 3rem 0;
+    grid-row: 1;
+    grid-column: 2 / 3;
+    max-width: 100%;
 }
+
+
 /*Footer*/
-.footer{
+
+.footer {
     background-color: var(--primosc);
     padding: 2rem 0;
     margin-top: 2rem;
-
 }
 
-.footer__texto{
+.footer__texto {
     text-align: center;
     font-family: var(--fuentepr);
     text-transform: uppercase;
     font-size: .75rem;
 }
 
+
 /*Navegación*/
+
 .nav {
     background-color: var(--primosc);
     padding: 1rem;
     display: flex;
     justify-content: center;
-    gap: 5rem;/*El gap nos ayuda a separar dos elementos espaciandolos entre cada elemento */
+    gap: 5rem;
+    /*El gap nos ayuda a separar dos elementos espaciandolos entre cada elemento */
 }
 
-.nav__enlace{
+.nav__enlace {
     font-family: var(--fuentepr);
     color: var(--tercero);
     font-size: 3rem;
@@ -114,117 +132,113 @@ html{
 }
 
 .nav__enlace--activo,
-.nav__enlace:hover{
+.nav__enlace:hover {
     color: var(--quinto);
 }
 
+
 /*grid*/
-.grid{
+
+.grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    
 }
 
 @media(min-width: 786px) {
-    .grid{
+    .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    
 }
 
+
 /*producto*/
-.producto{
+
+.producto {
     background-color: var(--primosc);
     padding: 1rem;
 }
 
-.producto__img{
+.producto__img {
     width: 100%;
 }
 
-.producto__info{
-    
-}
+.producto__info {}
 
-.producto__nombre{
+.producto__nombre {
     font-size: 4rem;
     color: var(--tercero);
 }
 
-.producto__precio{
+.producto__precio {
     font-size: 2.8rem;
     color: var(--cuarto);
-    
 }
 
 .producto__nombre,
-.producto__precio{
+.producto__precio {
     font-family: var(--fuentepr);
     text-align: center;
     margin: 1rem 0;
 }
 
+
 /*graficos*/
 
-.grafico{
+.grafico {
     min-height: 30rem;
-    background-repeat: no-repeat;/*para que la imagen de fondo no se repita*/
-    background-size: cover;/*para que la imagen de fondo tome todo el tamaño disponible*/
+    background-repeat: no-repeat;
+    /*para que la imagen de fondo no se repita*/
+    background-size: cover;
+    /*para que la imagen de fondo tome todo el tamaño disponible*/
     grid-column: 1 / 3;
 }
 
-.grafico--camisas{
-
-    grid-row: 2 / 3;/*son los numeros que vienen de arriba hacia abajo*/
-    grid-column: 1 / 3; /*son los numero que estan de izquierda a derecha*/
+.grafico--camisas {
+    grid-row: 2 / 3;
+    /*son los numeros que vienen de arriba hacia abajo*/
+    grid-column: 1 / 3;
+    /*son los numero que estan de izquierda a derecha*/
     max-width: 100%;
     background-image: url(../img/grafico1.jpg);
-
 }
 
-.grafico--node{
+.grafico--node {
     background-image: url(../img/grafico2.jpg);
- 
     grid-row: 8 / 9;
 }
-@media(min-width: 768px) {
-    .grafico--node{
 
+@media(min-width: 768px) {
+    .grafico--node {
         grid-row: 5 / 6;
         grid-column: 2 / 4;
         max-width: 100%;
-       
-    
-    }  
+    }
 }
+
 
 /*Nosotros*/
 
-.grid1{
+.grid1 {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 2, 1fr;
     gap: 2rem;
 }
 
-@media(min-width:768px ) {
-    .grid1{
+@media(min-width:768px) {
+    .grid1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        
     }
 }
 
-
-.parrafo{
-    
+.parrafo {
     column-gap: 2rem;
-
 }
 
-.parrafo--img{
+.parrafo--img {
     background-image: url(../img/nosotros.jpg);
     grid-row: 1 / 2;
     min-height: 40rem;
@@ -232,92 +246,88 @@ html{
     background-size: cover;
 }
 
-@media(min-width:768px ) {
-     
-    .parrafo--img{
+@media(min-width:768px) {
+    .parrafo--img {
         background-image: url(../img/nosotros.jpg);
         grid-column: 2 / 3;
         min-height: 30rem;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    
 }
 
-.parrafo--p p{
+.parrafo--p p {
     font-size: 1.5rem;
     /*display: flex;
     justify-content: center;
     */
-    margin: 0 4rem ;
-    
+    margin: 0 4rem;
 }
 
-
-.bloques{
+.bloques {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0rem;
     /*justify-content: center;*/
-    
 }
 
 @media(min-width: 513px) {
-    .bloques{
+    .bloques {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
-        
     }
-    
 }
 
-.bloque{
+.bloque {
     text-align: center;
 }
-.bloque__titulo{
+
+.bloque__titulo {
     margin: 0;
 }
-.bloque__img{
+
+.bloque__img {
     width: 100%;
 }
+
 
 /*Producto*/
 
 @media(min-width: 768px) {
-     .camisa{
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         column-gap: 2rem;
-     }
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
 }
 
-.camisa__contenido p{
+.camisa__contenido p {
     font-size: 2rem;
     padding: 1rem;
 }
 
-.formulario{
+.formulario {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
-.formulario__campo{
+.formulario__campo {
     border-color: var(--primosc);
     border-width: 1rem;
     border-style: solid;
-
-    border: 1rem solid var(--primosc);/*esta es la forma abreviada para darle formato a los campos sin necesidad de excribir tanto*/
+    border: 1rem solid var(--primosc);
+    /*esta es la forma abreviada para darle formato a los campos sin necesidad de excribir tanto*/
     background-color: transparent;
-   color: var(--negro);
+    color: var(--negro);
     font-size: 2rem;
     font-family: Arial, Helvetica, sans-serif;
     padding: 2rem;
     appearance: none;
 }
 
-.formulario__submit{
+.formulario__submit {
     background-color: var(--primosc);
     border: none;
     font-size: 2rem;
@@ -326,7 +336,8 @@ html{
     transition: background-color .3s ease;
     grid-column: 1 / 3;
 }
-.formulario__submit:hover{
+
+.formulario__submit:hover {
     cursor: pointer;
     background-color: var(--secundario);
 }
