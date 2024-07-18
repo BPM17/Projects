@@ -1,12 +1,12 @@
 :root {
-    --primario: #ffe54a;
-    --secundario: #ffbe0b;
-    --tercero: #311906;
+    --primario: #717A66;
+    --secundario: #9BC4BC;
+    --tercero: #fff;
     --cuarto: #023047;
-    --quinto: #fffaf2;
+    --quinto: #023047;
     --blanco: #fff;
     --negro: #000;
-    --primosc: #e4c200;
+    --primosc: #4B5043;
     --lila: #b5179e;
     --pur: #8338ec;
     --puc: #a26af1;
@@ -84,8 +84,7 @@ h3 {
 /*header*/
 
 .header {
-    /* display: flex;
-    justify-content: center; */
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
