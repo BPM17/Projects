@@ -70,13 +70,6 @@ h3 {
     padding: 0 5rem;
 }
 
-.container {
-    max-width: 60%;
-    max-height: 60%;
-    margin: o auto;
-    justify-content: space-around;
-}
-
 .shadow {
     -webkit-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.37);
     -moz-box-shadow: -5px 5px 5px 0px rgba(0, 0, 0, 0.37);
