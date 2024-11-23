@@ -1,0 +1,355 @@
+:root{
+    --letra:#e0e1dd;
+    --background:#778da9;
+    --header:#415a77;
+    --secundario:#1b263b;
+    --terciario:#0d1b2a;
+    --cuarto:#a6b4c7;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    /* esto es para automatizar lo del tamaño de imagenes sin necesidad de 
+                            hacer calculos para el padding y el margin*/
+    scroll-snap-type: y mandatory;
+}
+
+
+/*Scroll snap*/
+
+.servicios .navegacion-pr .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/*esta es la función de lo del padding y el margin automatico*/
+
+body {
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    font-weight: 400;
+    /* background-image: linear-gradient(to top, #b0c0bc 0%, var(--blanco) 100%); */
+    background-color: var(--background);
+}
+
+h1 {
+    font-size: 3.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.section{
+    width: 100%;
+    position:fixed;
+}
+
+.bodySection{
+    min-height: 20rem;
+    max-width: 90%;
+    margin: auto;
+    border-radius: 1rem;
+    background-color: var(--header);
+}
+
+.menu{
+    padding: 0 5rem;
+    display: flex;
+    justify-content: right;
+    height: 8rem;
+    width: 100%;
+    background-color: var(--header);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a{
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    justify-content: end;
+    width: 90%;
+}
+
+.menu a{
+    padding: 3rem 2rem 0rem 2rem;
+    color: var(--letra);
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+.menuImg{
+    width: 10%;
+    display: flex;
+    justify-content: left;
+}
+
+.menu a:hover{
+    color: var(--secundario);
+    font-weight: 700;
+    background-color: var(--background);
+    border-radius: 10%;
+}
+
+.linksFooter{
+    color: var(--letra);
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.linksFooter img{
+    padding: 5px;
+    width: 3rem;
+}
+
+.h6{
+    text-align: center;
+    color: var(--letra);
+    margin: 0;
+    padding: 0;
+}
+
+.h6 h6{
+    margin: 0;
+}
+
+.privacy{
+    color: var(--letra);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.privacy a{
+    padding: 1rem;
+}
+
+.section-footer{
+    width: 100%;
+    position: relative;
+    bottom: 0
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 0;
+    background-color: var(--secundario) ;
+    width: 100%;
+    gap: 10px;
+}
+
+.hero{
+    margin: auto;
+    padding: 5rem 0;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.hero img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.services{
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.service{
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--cuarto);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Slider */
+
+.slider-frame{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slider-frame ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+    list-style: none;
+}
+
+.slider-frame img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
+
+.container{
+    width: 50%;
+    height: 40rem;
+    margin: 10% auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--header);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+
+form{
+    width: 70%;
+    height: 30rem;
+    color: var(--letra);
+}
+
+.containerButton button{
+    width: 80%;
+    margin: 0 10%;
+    font-size: 20px;
+    background-color: var(--secundario);
+    border-radius: 5px;
+    border: none;
+    color: var(--letra);
+}
+
+.containerButton button:hover{
+    background-color: var(--cuarto);
+}
+
+.containerButton{
+    width: 100%;
+    height: 2rem;
+    margin-top: 40px;
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: 700;
+    border: none;
+    margin: auto;
+}
+
+.technologies{
+    margin: 5rem auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.technology{
+    background-color: var(--header);
+    border-radius: 3rem;
+    display: flex;
+    flex-direction:column;
+    padding: 2rem;
+}
+
+.technology img{
+    width: 100%;
+}
+
+.technology p{
+    justify-content: center;
+}
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25rem;
+    margin: 0;
+    background-color: var(--terciario);
+    color: var(--letra);
+}
+
+.slogan a{
+    text-decoration: none;
+    width: 15rem;
+    height: 4rem;
+    margin-top: 4rem;
+    color: var(--terciario);
+    background-color: var(--cuarto);
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.notice{
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 100rem;
+    color: var(--terciario);
+}
+
+.notice p{
+    size: 12px;
+}

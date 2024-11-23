@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    <section class="section">
+        {% include 'header.html' %}
+    </section>
+    <div class="slider-frame">
+        <ul>
+            <li><img src="{% static 'img/infrastructure.jpg' %}" alt=""></li>
+            <li><img src="{% static 'img/programming.jpg' %}" alt=""></li>
+            <li><img src="{% static 'img/merchandise.jpg' %}" alt=""></li>
+            <li><img src="{% static 'img/technicalSupport.jpg' %}" alt=""></li>
+        </ul>
+    </div>
+    <div class="hero">
+        <h2>Our services</h2>
+        <div class="services">
+            <div class="service">
+                <img src="{% static 'img/coding.png' %}" alt="">
+                <p>Development</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/infrastructure.png' %}" alt="">
+                <p>Infrastructure</p>
+            </div>
+            <div class="service">
+                <img src="{% static 'img/merchandise.png' %}" alt="">
+                <p>Merchanise</p>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="section-footer">
+        {% include 'footer.html' %}
+    </section>
+</body>
+
+</html>
