@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Development</title>
+</head>
+
+<body>
+    <section class="sectionMenu">
+        {% include 'header.html' %}
+    </section>
+    <section class="slogan">
+        <h2>We develop the solutions for your problem.</h2>
+    </section>
+    <section class = "technologies">
+        <div class = "technology" style="grid-column-start: 1 / 3; grid-column-end: 1 / 3; grid-row-start: 1 / 2; grid-row-end: 1 / 2">
+            <div class="logos">
+                <img src="{% static 'img/python.png' %}" alt="">
+            </div>
+            <div>
+                <p>Data aquisition, automation, GUI designing, web developments, applications, API consuming data.</p>
+            </div>
+        </div>
+        <div class = "technology" style="grid-column-start: 2 / 3; grid-column-end: 2 / 3; grid-row-start: 1 / 2; grid-row-end: 1 / 2">
+            <div class="logos">
+                <img src="{% static 'img/java.png' %}" alt="">
+            </div>
+            <div>
+                <p>Applications developments, API consiming information.</p>
+            </div>
+        </div>
+        <div class = "technology" style="grid-column-start: 3 / 3; grid-column-end: 3 / 3; grid-row-start: 1 / 2; grid-row-end: 1 / 2">
+            <div class="logos">
+                <img src="{% static 'img/sql.png' %}" alt="">
+            </div>
+            <div>
+                <p>Automation of data bases appended to developments.</p>
+            </div>
+        </div>
+        <div class = "technology" style="grid-column-start: 1 / 3; grid-column-end: 1 / 3; grid-row-start: 2 / 2; grid-row-end: 2 / 2">
+            <div class="logos">
+                <img src="{% static 'img/mongo.png' %}" alt="">
+            </div>
+            <div>
+                <p>Automation of data bases appended to developments.</p>
+            </div>
+        </div>
+        <div class = "technology" style="grid-column-start: 2 / 3; grid-column-end: 2 / 3; grid-row-start: 2 / 2; grid-row-end: 2 / 2">
+            <div class="logos">
+                <img src="{% static 'img/c-sharp.png' %}" alt="">
+            </div>
+            <div>
+                <p>Applications, API consuming data.</p>
+            </div>
+        </div>
+        <div class = "technology" style="grid-column-start: 3 / 3; grid-column-end: 3 / 3; grid-row-start: 2 / 2; grid-row-end: 2 / 2">
+            <div class="logos">
+                <img src="{% static 'img/api.png' %}" alt="">
+            </div>
+            <div>
+                <p>Web automated services.</p>
+            </div>
+        </div>
+    </section>
+    <section class="slogan">
+        <h2>To have the best solution for each problem it´s required the correct tool.</h2>
+        <a href="/contact">Contactanos</a>
+    </section>
+    <section>
+        {% include 'footer.html' %}
+    </section>
+</body>
+
+</html>

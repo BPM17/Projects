@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Merchandise</title>
+</head>
+
+<body>
+    <section class="sectionMenu">
+        {% include 'header.html' %}
+    </section>
+    <section class= "bodySection">
+        <h3>This is merchandise</h3>
+    </section>
+    <section>
+        {% include 'footer.html' %}
+    </section>
+</body>
+
+</html>
