@@ -11,5 +11,5 @@ class Token():
 
 if __name__ == "__main__":
     token = Token()
-    token = token.GetToken("johnDoe@example.com", "1234")
+    token = token.GetToken()
     print(token)

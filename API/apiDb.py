@@ -154,6 +154,7 @@ if __name__ == "__main__":
     # Create UserTable
     db.table.append("""CREATE TABLE IF NOT EXISTS USERS(
         id INTEGER PRIMARY KEY,
+        UserId VARCHAR(100) NOT NULL,
         Name VARCHAR(100) NOT NULL,
         LastName VARCHAR(100) NOT NULL,
         Email VARCHAR(100) NOT NULL,
